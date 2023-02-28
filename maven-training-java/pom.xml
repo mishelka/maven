@@ -2,17 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>sk.cde.training</groupId>
-    <artifactId>maven-training-parent</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>maven-training-java</artifactId>
+    <packaging>jar</packaging>
     <version>1.0</version>
 	
-	<modules>
-		<module>maven-training-java</module>
-		<module>maven-training-web</module>
-	</modules>
-	
-	<properties>
-		 <maven.compiler.source>19</maven.compiler.source>
-		 <maven.compiler.target>19</maven.compiler.target>
-	</properties>
+	<parent>
+		<artifactId>maven-training-parent</artifactId>
+		<groupId>sk.cde.training</groupId>
+		<version>1.0</version>
+	</parent>
+
 </project>
