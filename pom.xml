@@ -15,4 +15,49 @@
 		 <maven.compiler.source>18</maven.compiler.source>
 		 <maven.compiler.target>18</maven.compiler.target>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>6.0.5</version>
+<!--				<exclusions>-->
+<!--					<exclusion>-->
+<!--						<groupId>commons-logging</groupId>-->
+<!--						<artifactId>commons-logging</artifactId>-->
+<!--					</exclusion>-->
+<!--				</exclusions>-->
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>3.2.1</version>
+					<configuration>
+						<rules>
+							<bannedDependencies>
+								<excludes>
+									<exclude>commons-logging:commons-logging</exclude>
+								</excludes>
+							</bannedDependencies>
+						</rules>
+					</configuration>
+					<executions>
+						<execution>
+							<id>execute</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

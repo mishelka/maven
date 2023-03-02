@@ -6,6 +6,20 @@
     <packaging>war</packaging>
     <version>1.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>sk.cde.training</groupId>
+            <artifactId>maven-training-java</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
